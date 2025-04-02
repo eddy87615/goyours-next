@@ -1,0 +1,1356 @@
+.kv {
+  width: 100%;
+  height: 100vh;
+
+  border-radius: 0 0 90% 0;
+
+  overflow: hidden;
+
+  border-bottom: 4rem solid #ffe2bc;
+}
+
+.kvlogo {
+  position: absolute;
+  right: 10%;
+  bottom: 4%;
+
+  max-width: 40%;
+  height: auto;
+
+  z-index: 9;
+}
+.kvSlider img {
+  width: 100vw;
+  height: 100vh;
+
+  object-fit: cover;
+
+  pointer-events: none;
+}
+
+.swiper-fade .swiper-slide {
+  opacity: 0 !important;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.swiper-fade .swiper-slide-active {
+  opacity: 1 !important;
+}
+
+/*homrintroSection*/
+
+.homeintroSection {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.homeintrotxt::after {
+  position: absolute;
+  content: '';
+  width: 30rem;
+  height: 30rem;
+  background-image: url(/Japan.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  right: -10%;
+  top: 50%;
+
+  z-index: -1;
+}
+.homeintrotxt {
+  font-weight: bold;
+  line-height: 3rem;
+  text-align: center;
+
+  width: 60%;
+
+  position: relative;
+}
+.homeintrotxt p {
+  margin-top: 0;
+}
+
+.homeintrotxt h1 {
+  font-size: 1rem;
+
+  margin: 0;
+}
+
+.homepicdecoBear {
+  position: absolute;
+  top: -10%;
+  right: -10%;
+}
+
+.homeintroImgDiv0,
+.homeintroImgDiv1,
+.homeintroImgDiv2 {
+  border-radius: 500rem;
+  overflow: hidden;
+
+  width: 100%;
+  height: 100%;
+}
+.homeintroImgDiv0 {
+  box-shadow: 0.8rem 1rem 0px #ffe2bc;
+}
+.homeintroImgDiv1 {
+  box-shadow: -0.5rem -0.5rem 0px #ffe2bc;
+}
+.homeintroImgDiv2 {
+  box-shadow: -0.5rem 1rem 0px #ffe2bc;
+}
+
+.homeintroImgWrapper0,
+.homeintroImgWrapper1,
+.homeintroImgWrapper2 {
+  position: absolute;
+
+  pointer-events: none;
+}
+.homeintroImgWrapper0 {
+  top: 10%;
+  left: -10%;
+  width: 30rem;
+  height: 30rem;
+
+  animation: homeintroImg0 3s infinite linear;
+}
+.homeintroImgWrapper0::after {
+  position: absolute;
+  content: '';
+  background-image: url(/homepic-3-bear.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  width: 8rem;
+  height: 100%;
+
+  top: -10%;
+  right: 0;
+  transform: rotate(-20deg);
+
+  z-index: -1;
+}
+
+.homeintroImgWrapper1 {
+  top: 0;
+  left: 70%;
+  width: 250px;
+  height: 250px;
+
+  animation: homeintroImg0 4s infinite linear;
+}
+.homeintroImgWrapper1::after {
+  position: absolute;
+  content: '';
+  background-image: url(/goyoursBear-bg-home.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  width: 40px;
+  height: 100%;
+
+  top: -19%;
+  right: 54%;
+  transform: rotate(-4deg);
+}
+
+.homeintroImgWrapper2 {
+  bottom: 4%;
+  right: 0;
+  width: 20rem;
+  height: 20rem;
+
+  animation: homeintroImg0 2s infinite linear;
+}
+.homeintroImg0,
+.homeintroImg1,
+.homeintroImg2 {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  position: relative;
+}
+
+/*homeNewsSection*/
+.homeNewsSection {
+  height: fit-content;
+  width: 100vw;
+  margin: 0 auto;
+
+  position: relative;
+  z-index: 5;
+
+  padding-top: 4rem;
+}
+
+.homeNewsH2,
+.homeschoolH2,
+.homeJobH2,
+.homeHotpostH2 {
+  width: 80vw;
+  margin: 0 auto;
+
+  position: relative;
+  z-index: 1;
+}
+.homeNewsH2 h2,
+.homeschoolH2 h2,
+.homeJobH2 h2,
+.homeHotpostH2 h2 {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  width: fit-content;
+}
+.homeperhotpost .homeNewspostImg {
+  background-color: transparent;
+}
+.homeNewsprePost {
+  /* width: 30% !important; */
+}
+.homeNewsprePost a {
+  text-decoration: none;
+}
+
+.homeNewspostImg {
+  background-color: var(--goyoursYellow);
+
+  border-radius: 1rem;
+}
+.homeNewspostImg img {
+  width: 100%;
+
+  display: block;
+
+  border-radius: 1rem;
+
+  transition-duration: 0.5s;
+
+  pointer-events: none;
+}
+.homeNewsDiv {
+  padding-top: 10rem;
+}
+
+/* Webkit 瀏覽器 */
+.sp-scollNews::-webkit-scrollbar {
+  width: 0; /* 滾動條寬度 */
+  height: 0;
+}
+/* 針對 Webkit 瀏覽器 (Chrome, Safari) */
+.sp-scollNews::-webkit-scrollbar {
+  display: none;
+}
+
+.sp-scollNews::-webkit-scrollbar-track {
+  background: transparent; /* 軌道背景透明 */
+}
+
+.homeNewsDiv .swiper-button-prev,
+.homeNewsDiv .swiper-button-next {
+  display: none;
+}
+
+.homeNews-postTitle,
+.homeNews-postDate {
+  margin: 0.5rem 0;
+}
+.homeNews-postTitle {
+  font-size: 1.2rem;
+}
+.homeNews-postDate {
+  font-size: 1.1rem;
+  margin-top: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.homeNewsBear {
+  display: flex;
+  align-items: center;
+
+  width: 2rem;
+  height: 2rem;
+}
+.homeNewsBear img {
+  width: 100%;
+  height: 100%;
+}
+.homeNewsprePost a:hover .homeNewspostImg > img {
+  transform: scale(0.8);
+
+  transition-duration: 0.5s;
+}
+
+.centerSlide {
+  transition-duration: 1s;
+}
+.sideSlide {
+  filter: grayscale(100%);
+}
+
+/*HomeschoolList*/
+.homeschoolWrapper {
+  position: relative;
+
+  z-index: 5;
+}
+.homeschoolList {
+  position: relative;
+  height: 100%;
+  z-index: 3;
+
+  padding: 10rem 0;
+}
+.schoolListDiv {
+  width: 80vw;
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 10rem 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 4rem;
+}
+.schoolListPre {
+  position: relative;
+
+  width: 100%;
+  height: 20rem;
+
+  border-radius: 2rem;
+
+  box-shadow: 0 0 0.5rem rgb(0 0 0 / 20%);
+}
+
+.schoolListBg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  border-radius: 2rem;
+
+  clip-path: circle(84% at 40% 2%);
+  transition-duration: 0.5s;
+}
+.schoolListPre:hover .schoolListBg {
+  transition-duration: 0.5s;
+  clip-path: circle(16% at 0 0);
+}
+
+.schoolListPre:hover .homeSchool-schoolName,
+.schoolListPre:hover .homeSchool-schoolLocation {
+  opacity: 0;
+
+  transition-duration: 0.5s;
+}
+.schoolListCover {
+  transition-duration: 0.5s;
+
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  /* background-color: #fff; */
+  transform-origin: top left;
+
+  border-radius: 2rem;
+
+  /* display: none; */
+}
+
+.homeSchool-schoolName {
+  margin: 0;
+  padding: 0.5rem 1rem;
+
+  background-color: var(--goyoursYellow);
+  color: #fff;
+
+  display: flex;
+
+  width: fit-content;
+
+  font-size: 1.3rem;
+  font-weight: bold;
+
+  transform: translate(-1rem, 1rem);
+
+  opacity: 1;
+  transition-duration: 0.5s;
+
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.homeSchool-schoolLocation {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+
+  margin: 0;
+  padding: 0.5rem 1rem;
+
+  background-color: var(--goyoursBlack);
+  color: #fff;
+  font-weight: bold;
+
+  width: fit-content;
+
+  transform: translate(-1rem, 2rem);
+
+  opacity: 1;
+  transition-duration: 0.5s;
+
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.schoolListCover img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+
+  border-radius: 2rem;
+
+  transform-origin: top left;
+  transition-duration: 0.5s;
+
+  pointer-events: none;
+}
+.schoolListBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+  background-color: var(--goyoursYellow);
+  border-radius: 2rem;
+
+  font-weight: bold;
+
+  line-height: 1.8rem;
+}
+.homeSchool-back-schoolName {
+  position: relative;
+  text-align: center;
+  color: #fff;
+
+  font-size: 1.4rem;
+
+  width: 100%;
+
+  margin: 1.5rem 0;
+}
+.homeSchool-back-schoolName::after {
+  content: '';
+
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translate(-50%);
+
+  width: 90%;
+  height: 2px;
+
+  background-color: #fff;
+}
+.homeSchool-back-schoolIntro {
+  text-align: center;
+  width: 84%;
+
+  font-size: 0.875rem;
+}
+.schoolListBack ul {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: fit-content;
+
+  gap: 1rem;
+
+  padding: 0 3rem;
+
+  font-size: 0.875rem;
+
+  color: #fff;
+  font-weight: bold;
+}
+.schoolListBack ul span {
+  background-color: #fff;
+
+  font-weight: bold;
+  color: var(--goyoursYellow);
+
+  padding: 0.3rem 0.5rem;
+  margin-right: 0.5rem;
+
+  border-radius: 0.3rem;
+}
+.schoolListDetailBtn {
+  position: absolute;
+  bottom: 4%;
+  right: 2%;
+
+  border-radius: 400rem;
+
+  border: 0;
+  background-color: var(--goyoursBlack);
+  color: #fff;
+
+  font-weight: bold;
+
+  padding: 0.5rem 1rem;
+
+  transition-duration: 0.5s;
+  opacity: 0;
+
+  cursor: pointer;
+
+  text-decoration: none;
+}
+.schoolListDetailBtn:hover {
+  background-color: var(--goyoursBgColor);
+  color: var(--goyoursBlack);
+}
+.schoolListPre:hover .schoolListDetailBtn {
+  opacity: 1;
+  transition-duration: 0.5s;
+}
+.schoolListPointer {
+  position: absolute;
+  bottom: 4%;
+  right: 4%;
+
+  color: #fff;
+  width: 2rem;
+  height: 2rem;
+
+  transform: rotate(-45deg);
+
+  transition-duration: 0.5s;
+
+  z-index: 2;
+}
+.schoolListPre:hover .schoolListPointer {
+  transition-duration: 0.2s;
+  opacity: 0;
+  transform: translate(1rem, 1rem);
+}
+
+.formoreBtntoPage {
+  background-color: var(--goyoursYellow);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.3rem;
+
+  border: 0;
+  border-radius: 20rem;
+
+  padding: 0.8rem 5rem;
+
+  display: flex;
+  margin: 0 auto;
+  width: fit-content;
+
+  transition-duration: 0.5s;
+
+  position: relative;
+  z-index: 2;
+
+  /* display: none; */
+}
+.formoreBtntoPage:hover {
+  animation: btnbounce 0.5s ease-out;
+  background-color: var(--goyoursBlack);
+  color: #fff;
+  transition-duration: 0.5s;
+}
+
+@keyframes homeintroImg0 {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(-1px);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.more-school-button {
+  display: flex;
+  align-items: center;
+
+  background-color: var(--goyoursYellow);
+
+  border-radius: 50rem;
+
+  height: fit-content;
+  width: fit-content;
+
+  margin: 0 auto;
+
+  z-index: 2;
+}
+.more-school-button ul {
+  display: flex;
+}
+.more-school-button ul li {
+  width: fit-content;
+  height: fit-content;
+}
+
+.more-school-button p {
+  margin: 0;
+
+  z-index: 1;
+
+  transition-duration: 0.2s;
+
+  display: flex;
+  align-items: center;
+}
+
+.more-school-button ul a {
+  position: relative;
+
+  padding: 0.8rem 5rem;
+
+  color: #fff;
+
+  font-size: 0.87rem;
+
+  display: flex;
+  flex-direction: column;
+
+  font-weight: bold;
+  font-size: 1.3rem;
+
+  text-decoration: none;
+}
+.more-school-button span {
+  overflow: hidden;
+}
+.button-wrapper {
+  position: relative;
+}
+.more-school-icon {
+  position: absolute;
+  top: 100%;
+  transform: translateY(-100%) scale(0);
+  right: 20%;
+  width: 1.3rem;
+  height: 100%;
+  transform-origin: bottom center;
+
+  display: flex;
+  align-self: center;
+
+  transition-duration: 0.1s;
+}
+.more-school-button img {
+  width: 100%;
+  height: 100%;
+}
+
+.more-school-button li a:hover p:nth-child(1) {
+  transform: translateY(-100%);
+  transition-duration: 0.2s;
+}
+.more-school-button li a:hover p:nth-child(2) {
+  top: 0;
+  transition-duration: 0.2s;
+}
+.more-school-button li a:hover .more-school-icon {
+  top: 0;
+  transform: translateY(0) scale(1); /* hover 狀態：放大到 1 倍 */
+}
+.more-school-button li a:hover {
+  border-radius: 50rem;
+  background-color: var(--goyoursBlack);
+}
+.more-school-button a p:nth-child(2) {
+  position: absolute;
+  transition-duration: 0.2s;
+  visibility: hidden;
+}
+.aboutScroolDown-Home {
+  display: none;
+}
+
+.home-schoolList-arrow {
+  display: none;
+}
+.formoreBtntoPage {
+  display: none;
+}
+
+.sp-home-scrollDown {
+  display: none;
+}
+.sp-br {
+  display: none;
+}
+
+@media screen and (min-width: 1201px) {
+  .homeintroImgWrapper0 {
+    width: 27rem;
+    height: 27rem;
+
+    left: -8%;
+  }
+  .homeintroImgWrapper0::after {
+    top: -10%;
+    width: 6rem;
+  }
+  .homeintroImgWrapper2 {
+    right: -4%;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .homeintroImgWrapper0 {
+    left: 0;
+  }
+  .homeintroImgWrapper2 {
+    right: 0;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .homeintroImgWrapper0 {
+    width: 25rem;
+    height: 25rem;
+
+    top: 40%;
+  }
+
+  .homeNewsprePost {
+    /* width: 30% !important; */
+  }
+
+  .schoolListBack ul li:nth-child(2) {
+    display: none;
+  }
+  .jobListcontent ul li:nth-child(1) {
+    line-height: 1.5rem;
+  }
+  .schoolListPre {
+    height: 16rem;
+  }
+  .homeSchool-back-schoolName {
+    font-size: 1.2rem;
+  }
+
+  .homeSchool-back-schoolIntro {
+    font-size: 0.75rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .homeNewsH2,
+  .homeschoolH2,
+  .homeJobH2,
+  .homeHotpostH2 {
+    width: 90vw;
+  }
+  .homeNewsH2 h2,
+  .homeschoolH2 h2,
+  .homeJobH2 h2,
+  .homeHotpostH2 h2 {
+    font-size: 1.5rem;
+  }
+  .homeintroImgWrapper0 {
+    width: 20rem;
+    height: 20rem;
+  }
+  .homeintroImgWrapper1 {
+    display: none;
+  }
+  .homeintroImgWrapper2 {
+    display: block;
+  }
+  .homeintroImgWrapper0::after {
+    top: -10%;
+    width: 5rem;
+  }
+  .schoolListDiv {
+    width: 90vw;
+    gap: 2rem;
+    padding: 10rem 0;
+  }
+  .workingholidayDiv {
+    padding: 10rem 0;
+  }
+  .schoolListBg {
+    clip-path: circle(84% at 40% 10%);
+  }
+  .schoolListPre {
+    height: 14rem;
+  }
+  .schoolListCover,
+  .schoolListBg,
+  .schoolListBack,
+  .schoolListCover img,
+  .schoolListPre {
+    border-radius: 1.5rem;
+  }
+  .homeSchool-schoolName {
+    font-size: 1rem;
+  }
+  .homeSchool-schoolLocation {
+    font-size: 0.75rem;
+  }
+  .homeSchool-back-schoolName {
+    font-size: 1rem;
+
+    margin: 1rem 0;
+  }
+
+  .homeSchool-back-schoolIntro {
+    font-size: 0.75rem;
+  }
+  .schoolListBack ul {
+    display: none;
+  }
+  .homeNewsprePost {
+    /* width: 50% !important; */
+  }
+  .schoolListPointer {
+    width: 1.5rem;
+    right: 2%;
+    bottom: 2%;
+  }
+
+  .more-school-button ul a {
+    font-size: 1rem;
+
+    padding: 1rem 4rem;
+  }
+
+  .schoolListDetailBtn {
+    font-size: 0.875rem;
+
+    right: 4%;
+  }
+
+  .jobListcontent ul {
+    display: block;
+  }
+
+  .jobListcontent ul li:nth-child(1),
+  .jobListcontent ul li:nth-child(2) {
+    display: none;
+  }
+
+  .homeNewsprePost a:hover .homeNewspostImg > img {
+    transform: unset;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .homeNewsprePost a:hover .homeNewspostImg > img {
+    transform: unset;
+  }
+  .kvSlider {
+    position: relative;
+    z-index: 0;
+    border-radius: 0 0 50% 0;
+    overflow: hidden;
+  }
+  .homeNewsprePost {
+    flex-shrink: 0;
+  }
+  .sp-scollNews {
+    display: flex;
+    gap: 1rem;
+    overflow-x: scroll;
+
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+
+    /* padding-left: 1rem;
+      padding-right: 1rem; */
+  }
+  .kvlogo {
+    width: 44%;
+    max-width: 44%;
+  }
+  .homeintroSection {
+    height: 84vh;
+  }
+  .homeintroImgWrapper2 {
+    display: none;
+  }
+  .homeintroImgWrapper0 {
+    width: 18rem;
+    height: 18rem;
+
+    top: unset;
+    bottom: 0;
+    left: -4%;
+  }
+  .homeintroImgWrapper0::after {
+    top: -4%;
+    right: -10%;
+
+    width: 4rem;
+  }
+  .homeintroImgWrapper1 {
+    width: 200px;
+    height: 200px;
+    top: 4%;
+    right: -4%;
+    left: unset;
+  }
+  .homeintroImgWrapper1::after {
+    top: -24%;
+  }
+  .homeintrotxt {
+    width: 80%;
+  }
+
+  .homeNewsSection {
+    padding-top: 10rem;
+  }
+  .homeNewsprePost {
+    /* width: 50%; */
+  }
+
+  .schoolListDiv {
+    width: 90vw;
+
+    gap: 1.8rem;
+
+    padding: 4rem 0;
+  }
+  .schoolListPre {
+    height: 13rem;
+
+    border-radius: 1rem;
+  }
+  .schoolListCover img {
+    border-radius: 1rem;
+  }
+  .homeSchool-schoolName {
+    font-size: 1rem;
+  }
+  .homeSchool-schoolLocation {
+    font-size: 0.75rem;
+
+    transform: translate(-1rem, 1.5rem);
+  }
+  .schoolListBg {
+    border-radius: 1rem;
+
+    clip-path: circle(84% at 40% 4%);
+  }
+  .schoolListBack {
+    border-radius: 1rem;
+  }
+  .homeSchool-back-schoolName {
+    font-size: 1rem;
+  }
+  .homeSchool-back-schoolIntro {
+    font-size: 0.625rem;
+    line-height: 1.3rem;
+  }
+  .schoolListBack ul {
+    font-size: 0.625rem;
+  }
+  .schoolListBack ul li:nth-child(2) {
+    display: none;
+  }
+  .schoolListDetailBtn {
+    font-size: 0.625rem;
+  }
+
+  .schoolListPre:hover .schoolListBg {
+    transition-duration: 0.5s;
+    clip-path: circle(16% at 0 0);
+  }
+
+  .schoolListPointer {
+    width: 2rem;
+
+    bottom: 2%;
+  }
+
+  .more-school-button ul a {
+    font-size: 1rem;
+
+    padding: 0.8rem 3.5rem;
+  }
+
+  .workingholidayDiv {
+    width: 90vw;
+
+    gap: 1.8rem;
+
+    padding: 4rem 0;
+  }
+  .jobListPre {
+    height: 13rem;
+
+    border-radius: 1rem;
+  }
+  .jobListimg img {
+    border-radius: 1rem 0 0 1rem;
+  }
+  .jobListPre h3 {
+    font-size: 1rem;
+
+    margin-bottom: 0.5rem;
+  }
+  .jobListPre p {
+    font-size: 0.625rem;
+    padding: 0.3rem 0.8rem;
+  }
+  .jobListcontent ul {
+    font-size: 0.625rem;
+
+    padding: 1rem 0;
+  }
+
+  .homehotpostDiv {
+    padding: 4rem 0;
+  }
+
+  .homeContactusSection {
+    padding: 4rem 0;
+
+    width: 96vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  .sp-br {
+    display: block;
+  }
+  .sp-home-scrollDown {
+    display: none;
+    position: absolute;
+    bottom: -4%;
+    right: 0;
+    transform: translate(-50%, 50%);
+  }
+  .homeNewsprePost {
+    flex-shrink: 0;
+  }
+  .sp-scollNews {
+    display: flex;
+    gap: 1rem;
+    overflow-x: scroll;
+
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+
+    /* padding-left: 1rem;
+      padding-right: 1rem; */
+  }
+  .kv {
+    border-bottom-left-radius: calc(300 * 1em / 16);
+    border-bottom-right-radius: calc(300 * 1em / 16);
+    overflow: hidden;
+
+    box-sizing: border-box;
+    border-bottom: 1rem solid #ffe2bc;
+
+    height: 85vh;
+
+    margin-bottom: 15vh;
+  }
+
+  .kvSlider {
+    height: 85vh;
+  }
+  .kvlogo {
+    width: 65%;
+    max-width: 65%;
+
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  .homeintroImgWrapper0 {
+    width: 9rem;
+    height: 9rem;
+    left: -8%;
+    top: 10%;
+  }
+  .homeintroImgDiv0 {
+    box-shadow: 8px 8px 0px #ffe2bc;
+  }
+  .homeintroImgWrapper0::after {
+    top: -12%;
+    right: -8%;
+    width: 54px;
+    transform: rotate(-10deg);
+    z-index: -1;
+  }
+  .homeintroImgWrapper1 {
+    top: unset;
+    bottom: 0 !important;
+  }
+  .homeintroImgWrapper1::after {
+    width: 30px;
+    top: -15%;
+  }
+  .homeintroImgWrapper2 {
+    display: none;
+  }
+  .homeintroImgDiv1 {
+    width: 80%;
+    height: 80%;
+  }
+  .homeintroSection {
+    height: 90vh;
+  }
+  .homeintrotxt {
+    width: 60%;
+    line-height: 2rem;
+  }
+  .homeintrotxt h1,
+  .homeintrotxt p {
+    font-size: 0.875rem;
+  }
+  .homeintrotxt::after {
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 25rem;
+    height: 25rem;
+    z-index: -1;
+  }
+
+  .homeNewsH2 h2 {
+    font-size: 1rem;
+  }
+
+  .homeNewsDiv {
+    padding-top: 4rem;
+  }
+
+  .homeNews-postTitle {
+    font-size: 0.875rem;
+  }
+  .homeNews-postDate {
+    font-size: 0.75rem;
+  }
+  .homeNewsBear {
+    width: 1rem;
+    height: 1rem;
+  }
+  .homeNewsprePost {
+    /* width: 60% !important; */
+    /* margin-right: 4% !important; */
+
+    flex-shrink: 0;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+
+  .homeschoolList {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    /* pointer-events: none; */
+  }
+
+  .homeNewsprePost a:hover .homeNewspostImg > img {
+    transform: unset;
+  }
+
+  .schoolListPre:hover .schoolListBg {
+    clip-path: none;
+  }
+  .schoolListPre:hover .homeSchool-schoolName,
+  .schoolListPre:hover .homeSchool-schoolLocation {
+    opacity: 1;
+  }
+  .homeschoolH2 h2 {
+    font-size: 1rem;
+  }
+  .schoolListDiv {
+    grid-template-columns: 1fr;
+    padding: 4rem 0;
+    gap: 2rem;
+  }
+  .schoolListPre {
+    height: 12rem;
+    border-radius: 1.5rem;
+  }
+  .schoolListPre:nth-child(4),
+  .schoolListPre:nth-child(5),
+  .schoolListPre:nth-child(6) {
+    display: none;
+  }
+
+  .schoolListBg {
+    clip-path: none;
+  }
+  .schoolListBg h4 {
+    font-size: 0.875rem;
+    transform: translate(-0.5rem, 1rem);
+    padding: 0.3rem 0.5rem;
+  }
+  .homeSchool-schoolName {
+    font-size: 0.75rem;
+    transform: translate(-0.5rem, 1.5rem);
+    padding: 0.3rem 0.5rem;
+  }
+  .homeSchool-schoolLocation {
+    font-size: 0.75rem;
+    transform: translate(-0.5rem, 2rem);
+    padding: 0.3rem 0.5rem;
+  }
+  .schoolListBg img {
+    border-radius: 1.5rem 1.5rem 8rem 1.5rem;
+  }
+  .schoolListCover,
+  .schoolListBg {
+    border-radius: 1.5rem;
+  }
+  .schoolListBack {
+    border-radius: 1.5rem;
+  }
+  .schoolListDetailBtn,
+  .homeSchool-back-schoolName,
+  .homeSchool-back-schoolIntro,
+  .schoolListBack ul {
+    display: none;
+  }
+  .schoolListPointer {
+    display: none;
+  }
+  .home-schoolList-arrow {
+    position: absolute;
+    display: block;
+    bottom: 2%;
+    right: 2%;
+    width: 2rem;
+    height: 2rem;
+    z-index: 1;
+  }
+  .home-schoolList-arrow img {
+    width: 80%;
+  }
+  .schoolListPointer {
+    display: none;
+  }
+  .more-school-icon {
+    display: none;
+  }
+  .downP-wrapper {
+    display: none;
+  }
+  .more-school-button li a:hover p:nth-child(1) {
+    transform: translateY(0);
+  }
+  .more-school-button li a:hover {
+    border-radius: 50rem;
+    background-color: var(--goyoursYellow);
+  }
+  .more-school-button li a {
+    font-size: 0.825rem;
+    padding: 0.5rem 3rem;
+  }
+
+  .homeJobH2 h2 {
+    font-size: 1rem;
+  }
+
+  .homeHotpostH2 h2 {
+    font-size: 1rem;
+  }
+  .homehotpostDiv {
+    padding: 4rem 0;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    width: 100%; /* 确保容器宽度为全屏 */
+    overflow: hidden; /* 避免溢出 */
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .sp-home-scrollDown {
+    bottom: -4%;
+  }
+  .homeintroImgWrapper1 {
+    bottom: -24% !important;
+  }
+
+  .homebg-school-Wave {
+    top: -4%;
+    left: -60%;
+  }
+  .homebg-job-Wave {
+    top: -12%;
+  }
+  .homebg-hot-Wave {
+    top: -20%;
+    left: -20%;
+  }
+  .homeintrotxt {
+    width: 80%;
+  }
+  .homeintroSection {
+    height: 80vh;
+  }
+  .homeintroImgWrapper0 {
+    top: -8%;
+  }
+  .homeintrotxt::after {
+    width: 20rem;
+    height: 20rem;
+  }
+  .homeNewsprePost {
+    /* width: 70% !important; */
+    /* margin-right: 5% !important; */
+  }
+  .schoolListPre {
+    height: 12rem;
+    border-radius: 1.5rem;
+  }
+}

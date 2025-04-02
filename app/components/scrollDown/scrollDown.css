@@ -1,0 +1,247 @@
+/*scroll down arrow*/
+.scrollDownArrow {
+  position: absolute;
+  bottom: 6%;
+  right: 3%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.scrollText {
+  writing-mode: vertical-lr;
+
+  font-size: 1.2rem;
+  font-weight: thin;
+
+  height: fit-content;
+  margin: 0;
+  margin-bottom: 1rem;
+
+  color: #757575;
+}
+.arrowLine {
+  width: 2px;
+  height: 100px;
+}
+.arrowLine::after {
+  content: '';
+  position: absolute;
+  background-color: #757575;
+  width: 2px;
+  animation: scrollDownArrowLine 2s infinite ease-in-out;
+}
+.arrowDot {
+  transform: translate(0, -200px);
+
+  width: 6px;
+  height: 6px;
+  background-color: #757575;
+
+  border-radius: 50px;
+
+  animation: scrollDownArrowDot 2s infinite ease-in-out;
+}
+
+/*SIDE*/
+
+.scrollDown-side {
+  position: absolute;
+  bottom: 0;
+  right: 4%;
+  transform: translate(-50%);
+
+  display: flex;
+}
+.scrollDown-side-Text {
+  writing-mode: vertical-lr;
+
+  font-size: 1.2rem;
+
+  font-weight: 500;
+
+  margin: 0;
+  height: fit-content;
+
+  color: #757575;
+}
+.scrollDown-side-ArrowArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.scrollDown-side-Line {
+  width: 2px;
+  height: 100px;
+
+  display: inline-flex;
+  justify-content: center;
+}
+.scrollDown-side-Line::after {
+  content: '';
+  position: absolute;
+  background-color: #757575;
+  width: 1px;
+  animation: scrollDownArrowLine 2s infinite ease-in-out;
+}
+.scrollDown-side-Dot {
+  transform: translate(0, -205px);
+
+  width: 5px;
+  height: 5px;
+  background-color: #757575;
+
+  border-radius: 50px;
+
+  animation: scrollDownArrowDot 2s infinite ease-in-out;
+}
+/*scroll down arrow*/
+
+/*SIDE*/
+/*scroll down arrow*/
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .scrollDownArrow {
+    bottom: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .scrollDown-side-Line::after {
+    width: 1px;
+  }
+  .scrollDown-side-Dot {
+    width: 5px;
+    height: 5px;
+
+    display: inline-flex;
+  }
+  .scrollDown-side-Text {
+    font-size: 0.725rem;
+  }
+  .aboutScroolDown-Home {
+    display: block;
+    position: absolute;
+    bottom: 0%;
+    right: 0;
+    transform: translate(-50%, 50%);
+    display: flex;
+  }
+  .aboutScroolDownLine-home {
+    width: 2px;
+    height: 150px;
+  }
+  .aboutScroolDownLine-home::after {
+    content: '';
+    position: absolute;
+    background-color: #757575;
+    width: 1px;
+    animation: scrollDownArrowLine-home 2s infinite ease-in-out;
+  }
+  .aboutScroolDownDot-home {
+    transform: translate(0, -158px);
+
+    width: 8px;
+    height: 8px;
+    background-color: #757575;
+
+    border-radius: 50px;
+
+    animation: scrollDownArrowDot-home 2s infinite ease-in-out;
+  }
+
+  .scrollDownArrow {
+    display: none;
+  }
+
+  @keyframes scrollDownArrowDot-home {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes scrollDownArrowLine-home {
+    0% {
+      height: 0;
+      opacity: 0;
+    }
+
+    100% {
+      height: 150px;
+      opacity: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .aboutScroolDown-Home {
+    bottom: 0;
+  }
+
+  @keyframes scrollDownArrowDot {
+    0% {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+    99% {
+      opacity: 1;
+      transform: translate(0, -100px); /* 點移動至頂部 */
+    }
+    100% {
+      opacity: 0;
+      transform: translate(0, -100px); /* 保持在頂部，不閃爍 */
+    }
+  }
+
+  @keyframes scrollDownArrowLine {
+    0% {
+      height: 0;
+      opacity: 0;
+    }
+    99% {
+      height: 100px;
+      opacity: 1;
+    }
+    100% {
+      height: 100px;
+      opacity: 0; /* 在最後一瞬間才隱藏 */
+    }
+  }
+}
+
+/*ANIMATION*/
+@keyframes scrollDownArrowDot {
+  0% {
+    opacity: 0;
+    transform: translateY(-110px);
+  }
+  99% {
+    opacity: 1;
+    transform: translate(0, -5px); /* 點移動至頂部 */
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, -5px); /* 保持在頂部，不閃爍 */
+  }
+}
+
+@keyframes scrollDownArrowLine {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  99% {
+    height: 100px;
+    opacity: 1;
+  }
+  100% {
+    height: 100px;
+    opacity: 0; /* 在最後一瞬間才隱藏 */
+  }
+}

@@ -1,0 +1,74 @@
+.homebg-Wave {
+  width: 100vw;
+  fill: #fff;
+
+  position: relative;
+  z-index: -5;
+}
+.homebg-Wave svg {
+  z-index: -5;
+}
+
+.homebg-intro-Wave {
+  position: absolute;
+  z-index: 0;
+
+  bottom: -70%;
+
+  z-index: -2;
+}
+.homebg-school-Wave {
+  position: absolute;
+
+  top: -8%;
+  z-index: -2;
+}
+
+.homebg-job-Wave {
+  position: absolute;
+  top: -16%;
+  z-index: -9999;
+}
+
+.homebg-hot-Wave {
+  position: absolute;
+  top: -20%;
+  z-index: -3;
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .homebg-Wave {
+    width: 200vw;
+  }
+  .homebg-intro-Wave {
+    bottom: -50%;
+
+    z-index: unset;
+  }
+  .homebg-school-Wave {
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .homebg-job-Wave {
+    top: -14%;
+  }
+
+  .homebg-hot-Wave {
+    top: -14%;
+  }
+
+  .homebg-intro-Wave {
+    bottom: -54%;
+  }
+  .homebg-Wave {
+    width: 200vw;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .homebg-intro-Wave {
+    bottom: -56%;
+  }
+}
