@@ -335,8 +335,16 @@ export default function Home() {
     },
   ];
 
-  const currentURL = `${window.location.origin}${location.pathname}`;
-  const imageURL = `${window.location.origin}/LOGO-02-text.png`;
+  const [currentURL, setCurrentURL]=useState('');
+  const [imageURL, setimageURL]=useState('');
+
+  useEffect(()=>{
+    if(typeof window !== 'undefined'){
+      
+      setCurrentURL(`${window.location.origin}${location.pathname}`);
+      setimageURL(`${window.location.origin}/LOGO-02-text.png`);
+    }
+  })
 
   return (
     <>
